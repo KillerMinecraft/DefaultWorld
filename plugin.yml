@@ -1,0 +1,7 @@
+name: Default World
+main: com.ftwinston.Killer.DefaultWorld.Plugin
+depend: [Killer]
+version: 1
+load: STARTUP
+description: A world option for Killer Minecraft
+author: FTWinston
