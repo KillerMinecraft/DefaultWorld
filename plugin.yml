@@ -1,6 +1,6 @@
-name: Default World
+name: Default_World
 main: com.ftwinston.KillerMinecraft.Modules.DefaultWorld.Plugin
-depend: [Killer Minecraft]
+depend: [Killer_Minecraft]
 version: 1
 load: STARTUP
 description: A world generator for Killer Minecraft
