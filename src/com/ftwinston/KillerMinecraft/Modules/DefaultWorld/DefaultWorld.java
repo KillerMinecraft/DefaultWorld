@@ -9,14 +9,15 @@ import com.ftwinston.KillerMinecraft.Configuration.ToggleOption;
 
 public class DefaultWorld extends WorldGenerator
 {
-	ToggleOption largeBiomes;
+	ToggleOption largeBiomes, amplified;
 	
 	@Override
 	public Option[] setupOptions()
 	{
 		largeBiomes = new ToggleOption("Use large biomes", false);
+		amplified = new ToggleOption("Amplified world", false);
 		
-		return new Option[] { largeBiomes };
+		return new Option[] { largeBiomes, amplified };
 	}
 	
 	@Override
@@ -24,6 +25,8 @@ public class DefaultWorld extends WorldGenerator
 	{
 		if ( largeBiomes.isEnabled() )
 			world.setWorldType(WorldType.LARGE_BIOMES);
+		if ( amplified.isEnabled() )
+			world.setWorldType(WorldType.AMPLIFIED);
 		createWorld(world, runWhenDone);
 	}
 }
